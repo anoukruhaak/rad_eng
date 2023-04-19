@@ -9,3 +9,4 @@ zipp==3.15.0
 bootstrap-flask
 gspread
 oauth2client
+gunicorn==20.0.4
