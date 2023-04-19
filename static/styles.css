@@ -9,10 +9,7 @@ li a:hover {color: #E30285;}
 .navbar-light .navbar-nav .nav-link {
     color: #590134;
 }
-.active-link {
-    color: red;
 
-}
 .hero-bg { background: rgb(247, 238, 213);
     background: linear-gradient(0deg,rgba(248, 192, 225, 0.1) 0%,  rgba(239, 208, 114, 0.1) 100%);}
 .my-navbar { background-color: #fff;}

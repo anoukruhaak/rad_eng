@@ -9,7 +9,7 @@ app = Flask(__name__)
 app.secret_key = "FLASK_KEY"
 Bootstrap(app)
 
-credentials = ServiceAccountCredentials.from_json_keyfile_name("credentials.json",
+credentials = ServiceAccountCredentials.from_json_keyfile_name("google-credentials.json",
                                                               ["https://spreadsheets.google.com/feeds",
                                                                "https://www.googleapis.com/auth/spreadsheets",
                                                                "https://www.googleapis.com/auth/drive.file",                                                        "https://www.googleapis.com/auth/drive"])

@@ -1,4 +1,4 @@
-credentials.json
+google-credentials.json
 dist
 .venv
 .DS_Store
