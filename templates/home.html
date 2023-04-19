@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<meta property="og:image" content="" />
+  <h1>{% block title %}Radical Engineer{% endblock %}</h1>
+{% endblock %}
+
+{% block navbar %}
+    {% include 'navigation.html' %}
+{% endblock %}
+
+{% block content %}
+<section class="hero-bg">
+<div class="container mt-md-2 pt-4 mb-md-4 mb-1">
+    <div class="row">
+        <div class="banner col-md-8 pl-md-4">
+            <div class="text-box">
+                <h1 class="hero pb-2">We connect volunteer developers and designers to system-changing projects around the world.</h1>
+            </div>
+            <div class="" style="margin-top: 10vh;">
+             <a class="my-button" href="https://docs.google.com/forms/d/e/1FAIpQLSe79qgbrusuZyagN89oME_F7S9F6IGRRw7VhUTUc8he4dlBWQ/viewform" target="_blank" class="my-button">Apply for support</a>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+    <section class="">
+        <div class="container my-3 my-lg-5 py-1 py-lg-5 pl-lg-5">
+            <div class="row">
+                <div class="col-md-5 pb-5">
+                    <img class="section-img shadow-right" src="{{ url_for('static', filename='./assets/group_small.jpg') }}" />
+                 </div>
+                <div class="col-md-6 mx-auto ml-5 pl-md-5">
+                <h1 class="mb-md-4"> Who we are</h1>    
+                    <p>Faced with the threat of mass extinction, a global pandemic and rising inequality, we cannot afford to merely fight symptoms, but have to instead radically rethink the economic and social systems that produce them.</p>
+                    <p>We connect radical organisations working on bringing about post-capitalist economies, communities of care, or waste eradication with our growing community of software developers and designers. Our aim is to provide those who best understand the problems with the technological resources they need to successfully implement the solutions.</p>
+                    <a class="btn my-button-pink my-3 ml-0" href="http://eepurl.com/dCejKD" target="_blank" role="button">Sign up for our newsletter!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <section class="">
+        <div class="container my-3 my-lg-5 py-4 py-lg-5 pl-md-5">
+             <div class="row">
+                  <div class="col-md-5">
+                <h1 class="mb-md-4 pt-5">Become a <br>Radical Engineer</h1>
+                    <p>Would you like to join us as a volunteer developer, designer, cohort coordinator or any other relevant role?
+                    <br><br>Please check out our volunteer positions or get in touch, and we'll know where to find you when new slots open up!</p>
+                    <a class="btn my-button-pink my-3 ml-0" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScbVBVom85LP1nK7ueSkqz010zpGG4gjmEUUgyspvqCuhK2zQ/viewform" role="button">Get in touch!</a>
+                </div>
+                 <div class="col-md-5 mx-auto pt-5 pb-5">
+                    <img class="section-img shadow-left" src="{{ url_for('static', filename='./assets/robot.jpeg') }}" />
+                 </div>
+            </div>
+        </div>
+    </section>
+
+      <section class="">
+        <div class="container mt-lg-4 py-2 py-lg-5 pl-lg-5 pl-3">
+            <div class="row">
+                <div class="">
+                    <h1 class="orange-text">OUR <br> VALUES</h1>
+                 </div>
+                <div class="col-md-6 mr-md-3 mb-md-1 mx-auto">
+                    <h3 class=""> Effective Radicalism</h3>
+                    <p>Effective Altruism asks how we solve the world’s problems & pairs this with a theory of change: start by doing the most effective good you can. Effective Radicalism suggests that the best we can do, might be to change systemic conditions.</p>
+                    <br>
+                    <h3> Collaboration</h3>
+                    <p>Our problems are too great and our systems too complex to go at it alone. The Radical Engineers believe that lasting change happens when humans set their egos aside and collaborate.</p>
+                    <br>
+                    <h3>Don't disrupt, transition</h3>
+                    <p>Too often disruption takes the form of vulnerable people having their lives uprooted. Instead, we value strategies that help us transition to new economic systems.</p>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- TEAM -->
+<section class="my-bg-primary">
+      <div class="container mt-4 pt-5 pl-md-5">
+          <h1 class="mb-5">Our team</h1>
+            <div class="row">
+                <div class="col-md-3 mr-md- mb-3">
+                    <img src="{{ url_for('static', filename='./assets/margreet.png') }}" class="img-team mb-md-5 mb-3">
+                    <h4  class="mb-3"><a target="_blank" href="">Margreet Dijkstra</a></h4>
+                    <p>Margreet is a behavioural economist and web developer with an interest in projects with social and environmental impacts.</p>
+                </div>
+                <div class="col-md-3  mr-md- mb-3 mb-md-5">
+                    <img src="{{ url_for('static', filename='./assets/james.jpg') }}" class="img-team mb-md-5 mb-3">
+                    <h4  class="mb-3"><a target="_blank" href="https://twitter.com/jamescurtis29">James Curtis</a></h4>
+                    <p>James is a business planner specialising in income and budget planning for charities and organisations with radical ideas for improving the world.</p>
+               </div>
+                <div class="col-md-3  mr-md- mb-3">
+                    <img src="{{ url_for('static', filename='./assets/anouk.jpg') }}" class="img-team mb-md-5 mb-3">
+                    <h4  class="mb-3"><a target="_blank" href="https://twitter.com/AnoukRuhaak">Anouk Ruhaak</a></h4>
+                    <p>Anouk has a background in data governance, political economics and software development.</p>
+                </div>
+                <div class="col-md-3 mr-md- mb-3 mb-md-5">
+                    <img src="{{ url_for('static', filename='./assets/tom.jpg') }}" class="img-team mb-md-5 mb-3">
+                    <h4  class="mb-3"><a target="_blank" href="https://twitter.com/tjcberman">Tom Berman</a></h4>
+                    <p>Tom is a software developer / hacker, interested in projects with clear social, political, and environmental impacts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+            
+
+
+
+
+       
+       {% include "footer.html" %}
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<meta property="og:image" content="" />
+  <h1>{% block title %}Radical Engineer{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<section class="hero-bg">
+<div class="container mt-md-2 pt-4 pb-5 mb-1">
+    <div class="row">
+        <div class="banner col-md-8 pl-md-4">
+            <div class="text-box">
+                <h1 class="hero pb-2 mb-3">Stay up to date!</h1>
+                <p class="hero-p">Sign up to our newsletter and receive updates about new projects and vacancies!</p>
+            </div>
+            <div class="" style="margin-top: 5vh;">
+            <a class="my-button" href="http://eepurl.com/dCejKD" target="_blank" class="my-button">Receive our newsletter</a>
+            </div>
+        </div>
+    </div>
+</div>
+</section>   
+   
+       
+       {% include "footer.html" %}
+{% endblock %}

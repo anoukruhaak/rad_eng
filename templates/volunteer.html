@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<meta property="og:image" content="" />
+  <h1>{% block title %}Volunteer{% endblock %}</h1>
+{% endblock %}
+
+{% block navbar %}
+    {% include 'navigation.html' %}
+{% endblock %}
+
+{% block content %}
+<section class="hero-bg">
+<div class="container mt-md-2 pt-4 mb-1">
+    <div class="row">
+        <div class="banner col-md-8 pl-md-4">
+            <div class="text-box">
+                <h1 class="hero mb-3 pb-2">Become a Radical Engineer.</h1>
+                <p class="hero-p">We have several projects waiting for your skills! Fill out our short form </a> and we'll get back to you!</p>
+            </div>
+            <div class="" style="margin-top: 5vh;">
+                <a class="my-button" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScbVBVom85LP1nK7ueSkqz010zpGG4gjmEUUgyspvqCuhK2zQ/viewform" class="my-button">Apply</a>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+      
+     <!-- TEAM -->
+<section class=" pt-5">
+      <div class="container pt-5 pl-md-5">
+          <h1 class="mb-5">Open projects</h1>
+            <div class="row">
+
+                {% for v in open %}
+                <div class="col-md-5 mr-md- mb-3">
+                    <h4  class="mb-3"> <a target="_blank" href="{{ v["URL"] }}"> {{ v["Organisation"] }} </a></h4>
+                    <p> {{ v["Description"] }} </p>
+                    <p><strong class="project">What they need:<br></strong> {{ v["Needs"] }}
+                </div>
+
+                {% endfor %}
+
+                </div>
+                 <div class="" style="">
+                <a class="btn my-button-pink my-3 ml-0" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScbVBVom85LP1nK7ueSkqz010zpGG4gjmEUUgyspvqCuhK2zQ/viewform" class="my-button">Apply to volunteer</a>
+            </div>
+            </div>
+        </div>
+    </section>
+            
+
+   <section class="">
+        <div class="container my-3 my-lg-5 py-1 py-lg-5 pl-lg-5">
+            <div class="row">
+                <div class="col-md-6">
+                <h1 class="mb-md-4"> Contact</h1>    
+                    <p>If you’re not sure you qualify, or have other questions, feel free to send us an email: info@radicalengineers.com. James is happy to tell you more!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+       
+       {% include "footer.html" %}
+{% endblock %}

@@ -1,0 +1,40 @@
+
+            <nav class="navbar navbar-expand-lg my-navbar navbar-light fixed-top py-3 py-md-3">
+                <a class="navbar-brand" href="/">
+                    <img src="{{ url_for('static', filename='./assets/radical_logo_pink.png') }}" alt="" width="120vw" height="auto" class="d-inline-block align-text-top"/></a>
+                <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto order-0">
+                    <li id="home" class="nav-item px-3">
+                    <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li id="volunteer" class="nav-item px-3">
+                    <a class="nav-link" href="/volunteer">Volunteer</a>
+                    </li>
+                    <li id="support" class="nav-item px-3">
+                        <a class="nav-link" href="/projects">Tech Support</a>
+                    </li>
+                    <li id="news" class="nav-item px-3">
+                        <a class="nav-link" href="/news">News</a>
+                    </li>
+                </ul>
+                </div>
+            </nav>
+
+            <script>
+          
+        $(document).ready(function () {
+ 
+            $('ul.navbar-nav > li')
+                    .click(function (e) {
+                $('ul.navbar-nav > li')
+                    .removeClass('active-link');
+                $(this).addClass('active-link');
+            });
+        });
+ 
+            </script>
+

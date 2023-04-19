@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<meta property="og:image" content="" />
+  <h1>{% block title %}Radical Engineer{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<section class="hero-bg">
+<div class="container mt-md-2 pt-4 mb-md-4 mb-1">
+    <div class="row">
+        <div class="banner col-md-8 pl-md-4">
+            <div class="text-box">
+                <h1 class="hero pb-2 mb-3">Join our tech support program!</h1>
+                <p class="hero-p pt-3">Would your project or organisation benefit from our technical expertise? Our community of volunteer designers & developers are eager to get to work!</p>
+            </div>
+            <div class="" style="margin-top: 5vh;">
+            <a class="my-button" href="https://docs.google.com/forms/d/e/1FAIpQLSe79qgbrusuZyagN89oME_F7S9F6IGRRw7VhUTUc8he4dlBWQ/viewform" target="_blank" class="my-button">Apply for support</a>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+    <section class="">
+        <div class="container my-3 my-lg-5 py-1 py-lg-5 pl-lg-5">
+            <div class="row">
+                <div class="col-md-5 pb-5">
+                    <img class="section-img shadow-right" src="{{ url_for('static', filename='./assets/group_small.jpg') }}" />
+                 </div>
+                <div class="col-md-6 mx-auto ml-5 pl-md-5">
+                <h1 class="mb-md-4"> What we offer</h1>    
+                    <p>Would your project or organisation benefit from our technical expertise? We're here to help. Our community of volunteer designers, developers and general technologists are eager to get to work!</p>
+                    <p>We aim to provide radical organisations with hands-on technical support. We work with selected projects to understand their needs and constraints, design an initial approach to the problem and find them the (volunteer) developers and designers that can help make their projects a success.</p>
+                    <p>We accept projects on a rolling basis. Apply by filling out our form.</p>
+                    <a class="btn my-button-pink my-3 ml-0" href="#" role="button" ref="https://docs.google.com/forms/d/e/1FAIpQLSe79qgbrusuZyagN89oME_F7S9F6IGRRw7VhUTUc8he4dlBWQ/viewform" target="_blank">Apply for support</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <section class="">
+        <div class="container my-3 my-lg-5 py-4 py-lg-5 pl-md-5">
+             <div class="row">
+                  <div class="col-md-5">
+                    <h1 class="mb-md-4 pt-5">Types of projects we accept</h1>
+                    <p>Radical Engineers supports organisations and projects with radical aims. We believe that we cannot afford to merely fight symptoms, but have to instead radically rethink the economic and social systems that produce them. 
+                     </p>
+                    <p><strong>All sizes are welcome</strong> We support organisations of all sizes, experience levels and types (e.g. NGO, charities, corporations).</p>
+                    <p><strong>We are London-based, but you don’t have to be.</strong> If your organisation supports remote work, then so do we!</p>
+                    <p><strong style="color:#E30285;">If you’re not sure you qualify, or have other questions, drop us a line - info@radicalengineers.com</strong></p>
+                 </div>
+                 <div class="col-md-5 mx-auto pt-5 pb-5">
+                    <img class="section-img shadow-left" src="{{ url_for('static', filename='./assets/robot.jpeg') }}" />
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="">
+       <div class="container pt-5 pl-md-5 pb-5">
+          <h1 class="orange-text-small mb-5 pb-3">Previous Organisations</h1>
+            <div class="row">
+                {% for v in orgs %}
+                <div class="col-md-3 mr-md- mb-3">
+                    <p class="mb-2"> {{ v }}</p>
+                </div>
+
+                {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+            
+       
+       {% include "footer.html" %}
+{% endblock %}
